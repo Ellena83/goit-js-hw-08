@@ -34,9 +34,6 @@ function clickHandler(event) {
 
 let gallery = new SimpleLightbox('.gallery a');
 gallery.on('show.simplelightbox', function () {
-    Simplelightbox.show();
-    SimpleLightbox.createDomNodes();
-});
-gallery.on('error.simplelightbox', function (e) {
-	console.log(e); // some usefull information
+    // Simplelightbox.show();
+    //SimpleLightbox.createDomNodes();
 });

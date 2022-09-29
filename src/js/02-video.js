@@ -9,6 +9,17 @@
     function playOn ({seconds}) {
         localStorage.setItem('videoplayer-current-time', seconds);
     }
-    
-player.setCurrentTime(localStorage.getItem('videoplayer-current-time'));
-console.log(player)
+  let timeCount = localStorage.getItem('videoplayer-current-time');
+  if (timeCount !== null) {
+    player.setCurrentTime(timeCount);
+  }   
+ 
+populateLocalstorage()
+
+function populateLocalstorage() {
+    const savedData = JSON.parse(localStorage.getItem('videoplayer-current-time'));
+    if (!savedData) {
+       console.log(null);
+    }
+    else console.log(savedData);
+    }
